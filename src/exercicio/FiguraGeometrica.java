@@ -1,9 +1,19 @@
 package exercicio;
 
-public class FiguraGeometrica {
+public abstract class FiguraGeometrica {
 
-	public double getArea() {
-		return 0;
+	private String cor;
+	
+	public  abstract double calcularArea();
+
+	public String getCor() {
+		return cor;
 	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+	
+	
 
 }

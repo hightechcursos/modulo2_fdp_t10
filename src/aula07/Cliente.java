@@ -1,21 +1,24 @@
-package aula02;
+package aula07;
 
-public class Pessoa {
+public class Cliente {
 
 	private String nome;
-	private Cidade cidade;
+	
+	public Cliente(String nome) {
+		this.nome= nome;
+	}
+
+	public Cliente() {
+
+	}
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Cidade getCidade() {
-		return cidade;
-	}
-	public void setCidade(Cidade cidade) {
-		this.cidade = cidade;
-	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -23,6 +26,7 @@ public class Pessoa {
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -31,7 +35,7 @@ public class Pessoa {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Pessoa other = (Pessoa) obj;
+		Cliente other = (Cliente) obj;
 		if (nome == null) {
 			if (other.nome != null)
 				return false;
@@ -39,7 +43,6 @@ public class Pessoa {
 			return false;
 		return true;
 	}
-	
-	
+
 	
 }
